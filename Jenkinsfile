@@ -12,7 +12,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Ritthik01/terraform-project'
             }
         }
-/*
+
         stage('Terraform Init') {
             steps {
                 sh 'terraform init'
@@ -24,7 +24,7 @@ pipeline {
                 sh 'terraform apply -auto-approve'
             }
         }
-*/
+
         stage('Terraform Destroy') {
             steps {
                 sh 'terraform destroy'
