@@ -19,18 +19,18 @@ pipeline {
             }
         }
 
+        stage('Terraform Apply') {
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        }
+
         stage('Approve Destroy') {
             steps {
                 input(
                     message: 'Do you want to destroy the Terraform infrastructure?',
                     ok: 'Yes, Destroy'
                 )
-            }
-        }
-
-        stage('Terraform Apply') {
-            steps {
-                sh 'terraform apply -auto-approve'
             }
         }
         
