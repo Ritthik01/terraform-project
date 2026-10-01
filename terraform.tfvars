@@ -1,0 +1,5 @@
+instance_type = "t3.micro"
+ami           = "ami-01a00762f46d584a1"
+region        = "ap-south-1"
+key_name      = "fazoK"
+tags          = "ritthikauto-jenkins"
