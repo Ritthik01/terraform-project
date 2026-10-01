@@ -28,6 +28,7 @@ pipeline {
         stage('Terraform Destroy') {
             steps {
                 sh 'terraform destroy'
+                sh 'sleep 60'
             }
         }
         
